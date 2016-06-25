@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MKFramedButton_Example' do
+  pod 'MKFramedButton', :path => '../'
+
+  target 'MKFramedButton_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
