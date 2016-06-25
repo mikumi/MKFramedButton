@@ -1,0 +1,21 @@
+PODS:
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
+  - MKFramedButton (0.1.0):
+    - ChameleonFramework
+
+DEPENDENCIES:
+  - MKFramedButton (from `../`)
+
+EXTERNAL SOURCES:
+  MKFramedButton:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  MKFramedButton: 6f4a7688f52439bcd3adeed5bc044de45da25ba1
+
+PODFILE CHECKSUM: 245c67ac6387e978e5f98e9e2381b04d8b1d5e2f
+
+COCOAPODS: 1.0.0

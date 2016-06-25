@@ -7,9 +7,9 @@
 //
 
 #import "MKViewController.h"
+#import "MKFramedButton.h"
 
 @interface MKViewController ()
-
 @end
 
 @implementation MKViewController
@@ -17,13 +17,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    MKFramedButton *const button = [[MKFramedButton alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 200.0f, 40.0f)];
+    [self.view addSubview:button];
+    
+    UIColor *const buttonColor = [UIColor greenColor];
+    [button setTitle:@"Hello" forState:UIControlStateNormal];
+    [button setTitleColor:buttonColor forState:UIControlStateNormal];
+    button.layer.borderWidth = 1.0f;
+    button.layer.borderColor = buttonColor.CGColor;
 }
 
 @end
