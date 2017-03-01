@@ -6,6 +6,7 @@
 //============================================================
 @interface MKFramedButton ()
 
+@property (nonatomic, strong, nullable) UIColor *originalBackgroundColor;
 @property (nonatomic, strong, nullable) UIColor *originalBorderColor;
 @property (nonatomic, strong, nullable) UIColor *disabledBorderColor;
 
@@ -110,12 +111,15 @@
 
 - (void)highlightDidStart
 {
+    self.originalBackgroundColor = self.backgroundColor;
+    self.backgroundColor = [self.backgroundColor darkenByPercentage:0.5f];
     self.originalBorderColor = [UIColor colorWithCGColor:self.layer.borderColor];
     self.layer.borderColor = [self.originalBorderColor darkenByPercentage:0.5f].CGColor;
 }
 
 - (void)highlightDidEnd
 {
+    self.backgroundColor = self.originalBackgroundColor;
     self.layer.borderColor = self.originalBorderColor.CGColor;
 }
 
